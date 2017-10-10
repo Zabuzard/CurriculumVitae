@@ -101,6 +101,8 @@
 \definecolor{test}{HTML}{0077be}
 \definecolor{yt}{HTML}{c71610}
 \definecolor{stackoverflow}{HTML}{F48024}
+\definecolor{stackoverflowSilver}{HTML}{8C9298}
+\definecolor{stackoverflowBronze}{HTML}{C38B5F}
 
 \ifdefined\@cv@print
   \colorlet{green}{gray}
@@ -147,6 +149,9 @@
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
 \newcommand{\cvstackoverflow}[1]{\renewcommand{\cvstackoverflow}{#1}}
 \newcommand{\cvstackoverflowId}[1]{\renewcommand{\cvstackoverflowId}{#1}}
+\newcommand{\cvstackoverflowRep}[1]{\renewcommand{\cvstackoverflowRep}{#1}}
+\newcommand{\cvstackoverflowSilver}[1]{\renewcommand{\cvstackoverflowSilver}{#1}}
+\newcommand{\cvstackoverflowBronze}[1]{\renewcommand{\cvstackoverflowBronze}{#1}}
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
@@ -207,7 +212,7 @@
               \begin{array}{l}
               \hspace{4mm} \Huge \textnormal{\faMobile} 
               \end{array}
-              $} 
+              $}
             & \cvnumberphone\\}
             
       \ifthenelse{\equal{\cvsite}{}}{}{
@@ -215,14 +220,14 @@
               \begin{array}{l}
               \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
               \end{array}
-              $} 
+              $}
             & \href{http://\cvsite}{\cvsite} \\}
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
               \hspace{2.5mm} \huge \textnormal{\textcolor{yt}{\faEnvelopeO}}
               \end{array}
-              $} 
+              $}
             & \href{mailto:\cvmail}{\cvmail} \\}
       
        \ifthenelse{\equal{\cvlinkedin}{}}{}{
@@ -238,14 +243,16 @@
               \hspace{3mm} \huge \textnormal{\faGithub}
               \end{array}
               $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
-            }   
+            }
 		\ifthenelse{\equal{\cvstackoverflow}{}}{}{
             {$
               \begin{array}{l}
               \hspace{3mm} \huge \textnormal{\textcolor{stackoverflow}{\faStackOverflow}}
               \end{array}
               $} & \href{https://stackoverflow.com/users/\cvstackoverflowId/\cvstackoverflow?tab=profile}{\cvstackoverflowId/\cvstackoverflow} \\
-            }   
+				& \vspace{-7mm} \footnotesize\cvstackoverflowRep~Rep. \color{stackoverflowSilver}{$\bullet$ \cvstackoverflowSilver }
+					\color{stackoverflowBronze}{$\bullet$ \cvstackoverflowBronze}
+            }
             
     \end{tabular}
 
