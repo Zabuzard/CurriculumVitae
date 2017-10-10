@@ -4,7 +4,7 @@
 
 %----------------------------------------------------------------------------------------
 %	 REQUIRED PACKAGES
-%-----------------------------------------------------------------------	-----------------
+%----------------------------------------------------------------------------------------
 
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[sfdefault]{ClearSans}
@@ -13,7 +13,17 @@
 
 \usepackage{pstricks}
 
+% --------------------------------------------------------------------------------------
+% 	FONTS
+%-------------------------------------------------------------------------------------
+\newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf}
+\defaultfontfeatures{Extension = .otf}
 \usepackage{fontawesome}
+
+%----------------------------------------------------------------------------------------
+%	 REQUIRED PACKAGES CONTINUED
+%----------------------------------------------------------------------------------------
+
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
 \RequirePackage[absolute,overlay]{textpos}
@@ -90,6 +100,7 @@
 \definecolor{linkedin}{HTML}{0085AE}
 \definecolor{test}{HTML}{0077be}
 \definecolor{yt}{HTML}{c71610}
+\definecolor{stackoverflow}{HTML}{F48024}
 
 \ifdefined\@cv@print
   \colorlet{green}{gray}
@@ -116,11 +127,6 @@
 
 \setlength{\parindent}{0pt} % Disable paragraph indentation
 
-% --------------------------------------------------------------------------------------
-% 	FONTS
-%-------------------------------------------------------------------------------------
-\newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf}
-
 %----------------------------------------------------------------------------------------
 %	 SIDEBAR DEFINITIONS
 %----------------------------------------------------------------------------------------
@@ -139,6 +145,8 @@
 \newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
 \newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{#1}}
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
+\newcommand{\cvstackoverflow}[1]{\renewcommand{\cvstackoverflow}{#1}}
+\newcommand{\cvstackoverflowId}[1]{\renewcommand{\cvstackoverflowId}{#1}}
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
@@ -155,18 +163,13 @@
 \newcommand\programming[1]{ 
 	\renewcommand{\programming}{
 		\begin{tikzpicture}
-        	\node [above right] at (0, 4) {$0 \: LOC \: \arrow{3.2} \: 5000 \: LOC$};
+        	\node [above right] at (0, 4) {$0 \: LOC \: \arrow{2.9} \: 2\,600\,000 \: LOC$};
 			\foreach [count=\i] \x/\y in {#1}{
 				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
-				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
+				\draw[fill=white,pblue](0,\i) rectangle (\y,\i+0.4);
 				\node [above right] at (0,\i+0.35) {\x};
 			}
 		\end{tikzpicture}
-	}
-}
-\newcommand\projects[1]{ 
-	\renewcommand{\projects}{
-		{#1}
 	}
 }
 
@@ -186,7 +189,7 @@
     %------------------------------------------------
     
         \vspace{4mm}
-    {\Huge\color{pblue}\cvname}
+    {\huge\color{pblue}\cvname}
     
     \vspace{2mm}
 
@@ -236,6 +239,13 @@
               \end{array}
               $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
             }   
+		\ifthenelse{\equal{\cvstackoverflow}{}}{}{
+            {$
+              \begin{array}{l}
+              \hspace{3mm} \huge \textnormal{\textcolor{stackoverflow}{\faStackOverflow}}
+              \end{array}
+              $} & \href{https://stackoverflow.com/users/\cvstackoverflowId/\cvstackoverflow?tab=profile}{\cvstackoverflowId/\cvstackoverflow} \\
+            }   
             
     \end{tabular}
 
@@ -256,9 +266,9 @@
 		 \programming
          
         \vspace{4mm}
-        \profilesection{Projects}{3cm} 
+        \profilesection{Languages}{2.15cm} 
         
-        \projects
+        \languages
       
   \end{textblock}
 }
@@ -311,24 +321,14 @@
 	\end{tabular*}
 }
 
-% \newcommand{\twentyitem}[5]{%
-% 	#1&\parbox[t]{0.83\textwidth}{%
-% 		\textbf{#2}% 
-% 		\hfill%
-% 		{\footnotesize#3}\\%
-%         \ifblank{#4}{}{#4 \\}
-% 		#5\vspace{\parsep}%
-% 	}\\
-% }
-
 \newcommand{\twentyitem}[6]{%
 	#1&\parbox[t]{0.83\textwidth}{%
 		\textbf{#3}% 
 		\hfill%
-		{\footnotesize#4}%
+		{\color{pblue}\footnotesize#4}%
         }\\%
     #2&\parbox[t]{0.83\textwidth}{%
-		\ifblank{#5}{}{#5 \\}
+		\ifblank{#5}{}{{\footnotesize#5} \\}
 		#6%
 	}\\
 }
@@ -368,13 +368,13 @@
     %  specifies the minimum size of the bubbles
     bubble node size = 0.5cm,
     % specifies which is the distance among the bubble center node and the other bubbles
-    distance center/other bubbles = 0.3cm,
+    distance center/other bubbles = 0.35cm,
     % sets the distance from the text to the border of the bubble center node
     distance text center bubble = 0.5cm,
     % set center bubble color
     bubble center node color = pblue,
     % define the list of colors usable in the diagram
-    set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+    set color list = {materialorange, materialcyan, orange, green, lightgray, materialteal, materialamber, materialindigo, materialgreen, materiallime},
     % sets the opacity at which the bubbles are shown
     bubble fill opacity = 0.6,
     % sets the opacity at which the bubble text is shown

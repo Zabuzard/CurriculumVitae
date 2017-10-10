@@ -5,10 +5,8 @@
 %
 % Original author:
 % Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
-% Vel (vel@LaTeXTemplates.com) and Harsh (harsh.gadgil@gmail.com)
-%
-% License:
-% The MIT License (see included LICENSE file)
+% Vel (vel@LaTeXTemplates.com), Harsh (harsh.gadgil@gmail.com)
+% and ZabuzaW (zabuza.dev@gmail.com)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -22,26 +20,27 @@
 \newcommand\skills{ 
 ~
 	\smartdiagram[bubble diagram]{
-        \textbf{Data}\\\textbf{Engineering},
-        \textbf{Full Stack}\\\textbf{Web Dev},
-        \textbf{~~~~~OOP~~~~~~},
-        \textbf{Mobile}\\\textbf{Dev},
-        \textbf{Machine}\\\textbf{Learning},
-        \textbf{Test}\\\textbf{~~Automation~~},
-        \textbf{Statistical}\\\textbf{Analysis}
-    }
+		\textbf{Software}\\\textbf{Engineering},
+		\textbf{Algorithm}\\\textbf{~~Engineering~~},
+		\textbf{Web}\\\textbf{~~~~~~Dev~~~~~~},
+		\textbf{Theoretical}\\\textbf{CS},
+		\textbf{~~~Game~~~}\\\textbf{Dev},
+		\textbf{Mathematical}\\\textbf{Analysis},
+		\textbf{Agile}\\\textbf{Scrum}
+	}
 }
 
 % Programming skill bars
-\programming{{C $\textbullet$ C++  $\textbullet$ R / 3}, {Java $\textbullet$ SQL $\textbullet$ \large \LaTeX / 3.5}, {HTML5 $\textbullet$ JS $\textbullet$ Python / 5}}
+\programming{{C $\textbullet$ C++  $\textbullet$ C\# $\textbullet$ Python / 2.3}, {PHP $\textbullet$ SQL $\textbullet$ HTML $\textbullet$ JS $\textbullet$ CSS / 3.4}, {Java / 5.7}}
 
-% Projects text
-\projects{
-\textbf{DecAR} - An augmented reality interior decoration app for Android \\
-        \textbf{CIS*6320} - An implementation of the Bicubic interpolation algorithm in C++
-        \textbf{CIS*6650} - A comparative statistical study of SVM kernels, and number of hidden layers in ANN, on 5 UCI datasets
-        \textbf{CIS*6660} - A data linkage project to integrate Canada's WWI casualties and 1901 Canadian census using an SVM
-        \textbf{CIS*6650} - A statistical study of spurious correlations, such as correlating beer production with election outcome
+% Command for printing language overview bubbles
+\newcommand\languages{ 
+~
+	\smartdiagram[bubble diagram]{
+		\textbf{German}\\\textbf{C2},
+		\textbf{~~~~~~English~~~~~~}\\\textbf{C1},
+		\textbf{Chinese}\\\textbf{A2}
+	}
 }
 
 %----------------------------------------------------------------------------------------
@@ -49,15 +48,17 @@
 %----------------------------------------------------------------------------------------
 % If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
 
-\cvname{HARSH GADGIL} % Your name
-\cvjobtitle{ Data Engineer } % Job
+\cvname{DANIEL TISCHNER} % Your name
+\cvjobtitle{ Software Engineer } % Job
 % title/career
 
-\cvlinkedin{/in/hsgadgil}
-\cvgithub{opensorceror}
-\cvnumberphone{(647) 221 7999} % Phone number
-\cvsite{hgadgil.com} % Personal website
-\cvmail{harsh.gadgil@gmail.com} % Email address
+\cvlinkedin{/in/daniel-tischner} % LinkedIn site
+\cvgithub{ZabuzaW} % Github site
+\cvsite{} % Personal website
+\cvnumberphone{+49 761 42994095} % Phone number
+\cvstackoverflow{Zabuza} % StackOverflow username
+\cvstackoverflowId{2411243} % StackOverflow user id
+\cvmail{daniel-tischner@web.de} % Email address
 
 %----------------------------------------------------------------------------------------
 
@@ -72,42 +73,21 @@
 
 \begin{twenty} % Environment for a list with descriptions
 	\twentyitem
-    	{2015 - 2017}
+    	{2016 - Present~~~~}
         {}
-        {MSc., Computer Science \textnormal{(GPA: 3.7/4.0)}}
-        {\href{http://www.uoguelph.ca/}{University of Guelph, Canada}}
+        {M.~Sc., Computer Science}
+        {\href{https://www.uni-freiburg.de/}{University of Freiburg, Germany}}
         {}
         {}
 	\twentyitem
-    	{2009 - 2013}
+    	{2012 - 2016}
 		{}
-        {BEng., Computer Engineering \textnormal{(GPA: 4.0/4.0)}}
-        {\href{http://www.unipune.ac.in/}{University of Pune, India}}
+        {B.~~Sc., Computer Science \textnormal{(GPA: 1.9)}}
+        {\href{https://www.uni-freiburg.de/}{University of Freiburg, Germany}}
         {}
         {}
 	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
 \end{twenty}
-
-\section{Research}
-\begin{twenty}
-	\twentyitem
-    	{2015 - 2017}
-		{}
-        {MSc. Candidate, Graduate Research Assistant}
-        {\href{http://www.uoguelph.ca/}{University of Guelph}}
-        {}
-        {
-       	\textbf{Thesis}: Data Integration from Multiple Historical Sources to Study Canadian Casualties of WWI
-        {\begin{itemize}
-        \item Proposed a scalable stepwise deterministic method to reliably integrate datasets without labeled data. The method performs comparably with a method that incorporates a Support Vector Machine
-        \item Constructed a rich longitudinal dataset to enable comphrehensive time-series analyses about WWI Canadian society and military
-        \item \textbf{Tools}: R, Python, scikit-learn, BeautifulSoup, pandas, matplotlib \vspace{2mm}
-		\end{itemize}}
-        }
-\end{twenty}
-
-\section{Publications}
-L. Antonie, H. Gadgil, G. Grewal, and K. Inwood, “Historical Data Integration - A Study of WWI Canadian Soldiers,” in 2016 IEEE 16th International Conference on Data Mining Workshops (ICDMW), pp. 186-193, IEEE, 2016. \vspace{2mm}
 
 %----------------------------------------------------------------------------------------
 %	 EXPERIENCE
@@ -116,57 +96,184 @@ L. Antonie, H. Gadgil, G. Grewal, and K. Inwood, “Historical Data Integration 
 \section{Experience}
 
 \begin{twenty} % Environment for a list with descriptions
-\twentyitem
-    	{April 2017 -}
+     	\twentyitem
+    		{Oct 2016 -}
 		{Present}
-        {Data Engineer}
-        {\href{http://www.bell.ca/}{Bell}}
-        {}
-        {\begin{itemize}
-        \item Currently involved in building a realtime data ingestion pipeline on a Kafka cluster using Spark Streaming, to detect SMS spammers on Bell's network in realtime
-        \end{itemize}}
-        \\
+        		{Tutor}
+        		{\href{https://www.uni-freiburg.de/}{University of Freiburg, Germany}}
+        		{}
+        		{\begin{itemize}
+        			\item Course \textit{Information Retrieval} - Students study, create and optimize typical
+        				functionalities of modern search engines
+        			\item Course \textit{Algorithms and data structures} - Students learn all kind of typical data
+        				structures and learn how to analyze algorithms
+        			\item Course \textit{System Design Project} - Students need to build and program a robot that is
+        				able to fulfil several given tasks, organization of a competition
+        		\end{itemize}}\\
+     	\twentyitem
+    		{Nov 2008 -}
+		{Present}
+        		{Administrator \& Content Creator}
+        		{\href{http://www.fwwiki.de/}{FreewarWiki, Online}}
+        		{}
+        		{\begin{itemize}
+        			\item Development of automated bots and scripts that execute recurring tasks, database management,
+        				creation of scripted templates to assist inexperienced user in content creation
+        			\item Extensive documentation of game elements and content
+        			\item Inspection, correction and improvement of contributions
+        		\end{itemize}}\\
 	\twentyitem
-    	{Sep 2015 -}
-		{May 2016}
-        {Co-founder \& Full Stack Developer}
-        {\href{http://www.localxchange.ca/}{LocalXChange Inc.}}
-        {}
-        {
-        {\begin{itemize}
-        \item In a team of 2, raised \$8,000 in funding from The Hub incubator at the University of Guelph, to develop a prototype hyperlocal content platform, aimed at delivering local news and events from community organizations to local users in realtime (i.e., hyperlocal)
-        \item In a team of 3, built hybrid mobile \& web apps with Ionic, Angular.js and MongoDB, surpassing 1,000 users within a month since launch
-        \item Met with city officials, including the Mayor of Guelph, and university officials to discuss marketing \& business strategies for the platform 
-    \end{itemize}}
-        }
-    \\   
-    \twentyitem
-   		{Sep 2015 -}
-		{Dec 2016}
-        {Graduate Teaching Assistant}
-        {\href{http://www.uoguelph.ca}{University of Guelph}}
-        {}
-        {
-        {\begin{itemize}
-        \item TA for CIS*2430 (OOP), CIS*4150 (Software Reliability \& Testing) and CIS*3530 (Database Systems \& Concepts) courses
-    \end{itemize}}
-        }
-     \\
-     \twentyitem
-   		{Dec 2013 -}
-		{Apr 2015}
-        {Test Automation Engineer}
-        {\href{http://www.synechron.com/}{Synechron}}
-        {}
-        {
-        \begin{itemize}
-        \item Developed a \textit{Keyword Driven} and \textit{Behavior Driven} test automation framework for \href{https://www.microsoft.com/en-ca/dynamics/crm.aspx}{Microsoft Dynamics CRM}. Wrote an efficient recursive function to search multi-level frames, reducing development time by approximately two weeks. Won SPOT award {\includegraphics[scale=0.05]{img/trophy.png}}
-        
-        \textit{My work opened up a new position in the organization, enabling it to earn additional revenue of \$3,500 per month (estimated)}
-        \item Demonstrated by proof of concept that rewriting a test automation framework for \href{https://www.microsoft.com/en-ca/dynamics/erp-ax-overview.aspx}{Microsoft Dynamics AX}, using an open source library (White) instead of a proprietary one (Coded UI), would enable the team to save \$4,000 annually by downgrading the prevailing edition of Microsoft Visual Studio from \textit{Premium} to \textit{Professional}
-    \end{itemize}
-    	}
-        
+    		{Nov 2014 -}
+		{Dec 2015}
+        		{Board \& Webadmin}
+        		{\href{https://www.gruppe-w.de/}{Gruppe W, Online}}
+        		{}
+        		{\begin{itemize}
+        			\item Web development, performance improvement, development of automated web-integrated
+        				management software to ease workflow of all members
+			\item Human resource management, project management, planning and giving conferences, mediator
+        			\item Development of modifications for ArmA 3, creation of 2D artwork and video editing
+        		\end{itemize}}\\
+	\twentyitem
+    		{Mar 2007 -}
+		{Jul~ 2012}
+        		{Lead Programmer \& Artist}
+        		{\href{https://github.com/ZabuzaW/TalesOfFreewar}{Tales of Freewar Team, Germany}}
+        		{}
+        		{\begin{itemize}
+        			\item Programming a RPG game using the game framework RM2k3, responsible for game logic,
+        				implementing story, levels, conversations and battle logic
+        			\item Creation of 2D Art and sound editing, design and draft of maps
+        		\end{itemize}}\\
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 Awards
+%----------------------------------------------------------------------------------------
+
+\section{Awards}
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem
+    		{Jan 2017}
+		{}
+        		{SV-COMP 2017: Gold in Overall}
+        		{\href{https://sv-comp.sosy-lab.org/2017/}{ETAPS/SV-COMP}}
+        		{}
+        		{\begin{itemize}
+        			\item The competition compares state-of-the-art tools for software verification with respect to effectiveness
+        				and efficiency. The competition consists of two phases: a training phase and an evaluation phase.
+        		\end{itemize}}\\
+        	\twentyitem
+    		{Oct 2016}
+		{}
+        		{RERS Challenge 2016: Gold in Overall}
+        		{\href{http://rers-challenge.org/2016/}{RERS / ISoLA'16}}
+        		{}
+        		{\begin{itemize}
+        			\item The RERS Challenge provides a wealth of problems of increasing complexity, the more involved of
+        				which will probably be beyond any individual state-of-the-art method or tool. Characteristic for RERS
+        				is its wide scope, which addresses not only source code analyzers, but also (model-based) testers
+        				and (test-based) modelers, and in particular Free stylers.
+        		\end{itemize}}\\
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+\newpage
+
+\makeprofile % Print the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 Publications
+%----------------------------------------------------------------------------------------
+
+\section{Publications \& Preprints}
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem
+    		{Mar 2017}
+		{}
+        		{Minimization of Visibly Pushdown Automata\\Using Partial Max-SAT}
+        		{\href{https://link.springer.com/chapter/10.1007/978-3-662-54577-5_27}{TACAS 2017/Springer}}
+        		{}
+        		{}\\
+        	\twentyitem
+    		{Mar 2016}
+		{}
+        		{Minimization of Büchi Automata using Fair Simulation}
+        		{\href{https://arxiv.org/abs/1603.01107}{Preprint arXiv}}
+        		{}
+        		{}\\
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 Projects
+%----------------------------------------------------------------------------------------
+
+\section{Projects}
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem
+    		{Dez 2015 -}
+		{Present}
+        		{ULTIMATE}
+        		{}
+        		{program-analysis, model-checking, reachability, termination}
+        		{\begin{itemize}
+        			\item Development, implementation, analysis and benchmarking of algorithms to generate random finite word,
+        			infinite word, nested word and tree automata (FA, NWA, TA) and also algorithms to minimize them
+        		\end{itemize}}\\
+	\twentyitem
+    		{Apr 2016 -}
+		{Present}
+        		{Sparkle}
+        		{}
+        		{api, selenium, mmorpg}
+        		{\begin{itemize}
+        			\item Creation of a robust Selenium driven API for a browser embedded MMORPG which uses web-crawling mechanisms.
+        		\end{itemize}}\\
+	\twentyitem
+    		{Jun 2016 -}
+		{Apr 2017}
+        		{Mem-Eater-Bug}
+        		{}
+        		{jna, memory-manipulation, code-injection, windows-api}
+        		{\begin{itemize}
+        			\item Familiarization with security technologies and reverse engineering
+        			\item Providing an API which is capable of hooking onto other processes in order to provide memory manipulation
+        				methods and the possibility to inject foreign code
+        		\end{itemize}}\\
+	\twentyitem
+    		{Apr 2014 -}
+		{Feb 2015}
+        		{Antigen}
+        		{}
+        		{game, real-time-strategy, game-design, scrum}
+        		{\begin{itemize}
+        			\item In a team of 5 develop a strategy game from scratch using Scrum as software development managing framework
+        			\item Draft and design of an idea for a real time strategy game, creation of a detailed game design document
+        			\item Implementation of the game, primarily its logic and fast collision detection solutions
+        		\end{itemize}}\\
+	\twentyitem
+    		{May 2017 -}
+		{Aug 2017}
+        		{TreeFlood}
+        		{}
+        		{parallel-computing, shared-memory, graph-algorithms, exploration}
+        		{\begin{itemize}
+        			\item Study and implementation of an algorithm which distributedly explores unknown tree graphs
+        			\item Creation of a demo GUI that step wise shows how the algorithm works, present the algorithm in a conference
+        		\end{itemize}}\\
+	\twentyitem
+    		{May 2017 -}
+		{Jul 2017}
+        		{Parbot}
+        		{}
+        		{chatbot, selenium, api, service}
+        		{\begin{itemize}
+        			\item Development of a robust chatbot service which is able to recover from errors
+        			\item Implementation of a robust client which uses the chatbot service to automatically interact with
+        				users of a browser embedded MMORPG
+        		\end{itemize}}\\
 	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
 \end{twenty}
 
