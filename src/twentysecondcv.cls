@@ -101,6 +101,7 @@
 \definecolor{test}{HTML}{0077be}
 \definecolor{yt}{HTML}{c71610}
 \definecolor{stackoverflow}{HTML}{F48024}
+\definecolor{stackoverflowGold}{HTML}{DDB000}
 \definecolor{stackoverflowSilver}{HTML}{8C9298}
 \definecolor{stackoverflowBronze}{HTML}{C38B5F}
 
@@ -150,6 +151,7 @@
 \newcommand{\cvstackoverflow}[1]{\renewcommand{\cvstackoverflow}{#1}}
 \newcommand{\cvstackoverflowId}[1]{\renewcommand{\cvstackoverflowId}{#1}}
 \newcommand{\cvstackoverflowRep}[1]{\renewcommand{\cvstackoverflowRep}{#1}}
+\newcommand{\cvstackoverflowGold}[1]{\renewcommand{\cvstackoverflowGold}{#1}}
 \newcommand{\cvstackoverflowSilver}[1]{\renewcommand{\cvstackoverflowSilver}{#1}}
 \newcommand{\cvstackoverflowBronze}[1]{\renewcommand{\cvstackoverflowBronze}{#1}}
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
@@ -250,7 +252,7 @@
               \hspace{3mm} \huge \textnormal{\textcolor{stackoverflow}{\faStackOverflow}}
               \end{array}
               $} & \href{https://stackoverflow.com/users/\cvstackoverflowId/\cvstackoverflow?tab=profile}{\cvstackoverflowId/\cvstackoverflow} \\
-				& \vspace{-7mm} \footnotesize\cvstackoverflowRep~Rep. \color{stackoverflowSilver}{$\bullet$ \cvstackoverflowSilver }
+				& \vspace{-7mm} \footnotesize\cvstackoverflowRep~Rep. \color{stackoverflowGold}{$\bullet$ \cvstackoverflowGold } \color{stackoverflowSilver}{$\bullet$ \cvstackoverflowSilver }
 					\color{stackoverflowBronze}{$\bullet$ \cvstackoverflowBronze}
             }
             
