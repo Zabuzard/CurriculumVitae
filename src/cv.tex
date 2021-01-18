@@ -16,59 +16,156 @@
 
 \documentclass[letterpaper]{twentysecondcv} % a4paper for A4
 
-% Command for printing skill overview bubbles
-\newcommand\skills{ 
-~
-	\smartdiagram[bubble diagram]{
-		\textbf{Software}\\\textbf{Engineering},
-		\textbf{Algorithm}\\\textbf{~~Engineering~~},
-		\textbf{Web}\\\textbf{~~~~~~Dev~~~~~~},
-		\textbf{Theoretical}\\\textbf{CS},
-		\textbf{~~~Game~~~}\\\textbf{Dev},
-		\textbf{Mathematical}\\\textbf{Analysis},
-		\textbf{Agile}\\\textbf{Scrum}
-	}
-}
-
-% Programming skill bars
-\programming{{C $\textbullet$ C++  $\textbullet$ C\# $\textbullet$ Python / 2.1}, {PHP $\textbullet$ SQL $\textbullet$ HTML $\textbullet$ JS $\textbullet$ CSS / 3.3}, {Java / 5.7}}
-
-% Command for printing language overview bubbles
-\newcommand\languages{ 
-~
-	\smartdiagram[bubble diagram]{
-		\textbf{~~~German~~~}\\\textbf{C2},
-		\textbf{~~~~~~~~English~~~~~~~~}\\\textbf{C1},
-		\textbf{Chinese}\\\textbf{A2}
-	}
-}
-
 %----------------------------------------------------------------------------------------
 %	 PERSONAL INFORMATION
 %----------------------------------------------------------------------------------------
 % If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
 
 \cvname{DANIEL TISCHNER} % Your name
-\cvjobtitle{ Software Engineer, 26 } % Job
+\cvjobtitle{ Software Engineer, 29 } % Job
+\cvavatar{avatar.jpg} % Avatar
 % title/career
 
 \cvlinkedin{/in/daniel-tischner} % LinkedIn site
-\cvgithub{ZabuzaW} % Github site
+\cvgithub{Zabuzard} % Github site
 \cvsite{} % Personal website
-\cvnumberphone{+49 2132 5810229} % Phone number
-\cvstackoverflow{Zabuza} % StackOverflow user name
+\cvnumberphone{+49 211 15824734} % Phone number
+\cvstackoverflow{Zabuzard} % StackOverflow user name
 \cvstackoverflowId{2411243} % StackOverflow user id
-\cvstackoverflowRep{10,735} % StackOverflow user reputation
-\cvstackoverflowGold{5} % StackOverflow amount of gold badges
-\cvstackoverflowSilver{25} % StackOverflow amount of silver badges
-\cvstackoverflowBronze{38} % StackOverflow amount of bronze badges
+\cvstackoverflowRep{19,451} % StackOverflow user reputation
+\cvstackoverflowGold{7} % StackOverflow amount of gold badges
+\cvstackoverflowSilver{42} % StackOverflow amount of silver badges
+\cvstackoverflowBronze{64} % StackOverflow amount of bronze badges
 \cvmail{daniel.tischner.cs@gmail.com} % Email address
+
+% Skill overview bubbles
+\newcommand\skills{ 
+~
+	\smartdiagram[bubble diagram]{
+		\textbf{Software}\\\textbf{Engineering},
+		\textbf{Algorithm}\\\textbf{~~Engineering~~},
+		\textbf{Web}\\\textbf{~~~~Dev~~~~},
+		\textbf{Theoretical}\\\textbf{CS},
+		\textbf{Backend}\\\textbf{~~~RESTful~~~},
+		\textbf{Math}\\\textbf{~~Analysis~~},
+		\textbf{Agile}\\\textbf{~Scrum~}
+	}
+}
+
+% Programming skill bars
+\programming{
+	{C $\textbullet$ Lua $\textbullet$ ActionScript $\textbullet$ Perl / 2.0},
+	{C\# $\textbullet$ Python $\textbullet$ PHP / 2.5},
+	{SQL $\textbullet$ HTML $\textbullet$ JavaScript $\textbullet$ CSS / 3.1},
+	{C++ / 4.6},
+	{Java / 6}}
+
+% Language overview bubbles
+\newcommand\languages{ 
+~
+	\smartdiagram[bubble diagram]{
+		\textbf{~~~German~~~}\\\textbf{native},
+		\textbf{~~~~~~~~English~~~~~~~~}\\\textbf{C2},
+		\textbf{Chinese}\\\textbf{A2}
+	}
+}
+
+% Technologies
+\technologies{
+	{materialteal!35/Java/Gson, Jackson, Selenium, JSoup, Apache HttpComponents, Swing\vspace{1mm}\\
+		JUnit, Logback, SLF4J, Log4j, Checkstyle,\vspace{1mm}\\
+		JNI, JNA, JMH, JProfiler,\vspace{1mm}\\
+		JDBC, Hibernate, OneBusAway, Osm4j, Tomcat,\vspace{1mm}\\
+		Apache Commons, Guava, protobuf, fastutil, Trove, Google Collections, Eclipse Collections,\vspace{1mm}\\
+		JWBF, detectlanguage, JavaILP},
+	{materialteal!35/Spring/Boot, Framework, Data, Security, Session, Batch, Web Flow, Web Services, Reactor, WebFlux, Cloud, Actuator, Hystrix},
+	{materialteal!35/Frontend/AngularJS, Knockout, jQuery, Thymeleaf, Leaflet, PHP-Fusion},
+	{materialteal!35/C++ $\textbullet$ C\#/Boost, WinAPI, VSProfiler, Qt, XNA, MonoGame},
+	{materialteal!35/Databases/MySQL, SQLite, InfluxDB, NoSQL, H2, MariaDB},
+	{materialteal!35/Networking/TCP, UDP, HTTP, HTTPS, FTP,\vspace{1mm}\\
+		AWS, REST, JSON, protobuf},
+	{materialamber!20/IDEs/Intellij, Eclipse, Visual Studio, VSC},
+	{materialamber!20/Versioning/Git, SVN, Perforce, GitHub, GitLab, GitKraken, SourceTree, P4Merge, WinMerge},
+	{materialamber!20/Build Management/Maven, CMake, Conan, Ant, Jenkins, SonarQube, Resharper, Checkstyle},
+	{materialamber!20/Organization/GitLab Issues, Jira, Confluence, Toggl, Grafana, Kibana, SmartRecruiters, KeePass},
+	{materialamber!20/Communication/Slack, Discord, Skype, MS Teams, MS Outlook},
+	{materialamber!20/Image $\textbullet$ Video/Photoshop, PhotoFiltre, Gimp, OBS Studio, Sony Vegas, Dxtory, Audacity}}
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
 
-\makeprofile % Print the sidebar
+\makesidebarFirst % Print the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 Profile
+%----------------------------------------------------------------------------------------
+\section{Profile}
+
+\begin{itemize}
+	\item \textbf{9 years} of professional programming experience, 13 in total
+	\item \textbf{Master in Java}, expert in C++ and intermediate Fullstack knowledge
+	\item \textbf{Math enthusiast} with large background in theoretical CS and analysis
+	\item \textbf{Passionate teacher}, top user on \textit{StackOverflow}, top helper on \textit{Together Java}
+	\item \textbf{Strong academic background} with focus on algorithm development and analysis
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\begin{twenty} % Environment for a list with descriptions
+     	\twentyitem
+    		{Nov 2018 -}
+		{Present}
+        		{C++ Programmer (Intermediate)}
+        		{\href{https://duesseldorf.ubisoft.com/en}{Ubisoft Düsseldorf, Germany}}
+        		{C++17, C++14, C++11, SQL, Boost, WinAPI, REST, AWS, protobuf, Selenium, CMake, Jenkins, Jira, Scrum}
+        		{\begin{itemize}
+        			\item Expert on all game download and upload topics in the companies game launcher (\textit{Ubisoft Connect}/\textit{Uplay}), including
+        			\begin{itemize}
+        				\item command-line tool to upload games
+        				\item revamping the patching system (based on \textit{FastCDC})
+        				\item integrating a new progressive download technology
+        				\item tools for savegame management and migration
+        			\end{itemize}
+        			\item Technical consultant for Selenium based automation tests
+        			\item Contact for partners for technical questions (Google, Amazon, Tencent, Epic Games, Denuvo)
+        			\item Recruitment - CVs, interviews, test reviews, onboarding, mentoring
+        			\item Attending various leadership trainings
+        		\end{itemize}}\\
+     	\twentyitem
+    		{Oct 2016 -}
+		{Nov 2018}
+        		{Tutor}
+        		{\href{https://www.uni-freiburg.de/}{University of Freiburg, Germany}}
+        		{C++11, Java 8, Python 3, Jenkins}
+        		{\begin{itemize}
+        			\item Assisting students understanding the contents of courses, organization of weekly meetings
+        			\item Courses:
+        			\begin{itemize}
+        				\item \textit{Programming in C++}
+        				\item \textit{Information Retrieval}
+        				\item \textit{Algorithms and data structures}
+        				\item \textit{System Design Project}
+        			\end{itemize}
+        		\end{itemize}}\\
+	\twentyitem
+    		{Nov 2014 -}
+		{Dec 2015}
+        		{Owner \& Full Stack Developer}
+        		{\href{https://www.gruppe-w.de/}{Gruppe W, Online}}
+        		{PHP, HTML, JS, jQuery, PHP-Fusion, SQL, C++11, SQF, Photoshop, Sony Vegas, Audacity}
+        		{\begin{itemize}
+        			\item Web development, performance improvement, development of automated web-integrated
+        				management software to ease workflow of all members
+			\item Human resource management, project management, mediator
+        			\item Development of modifications for ArmA 3, creation of 2D artwork and video editing
+        		\end{itemize}}\\
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
 
 %----------------------------------------------------------------------------------------
 %	 EDUCATION
@@ -77,7 +174,7 @@
 
 \begin{twenty} % Environment for a list with descriptions
 	\twentyitem
-    	{2016 - Present~~~~}
+    	{2016 - 2018~~~~}
         {}
         {M.~Sc., Computer Science}
         {\href{https://www.uni-freiburg.de/}{University of Freiburg, Germany}}
@@ -93,66 +190,9 @@
 	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
 \end{twenty}
 
-%----------------------------------------------------------------------------------------
-%	 EXPERIENCE
-%----------------------------------------------------------------------------------------
+\newpage
 
-\section{Experience}
-
-\begin{twenty} % Environment for a list with descriptions
-     	\twentyitem
-    		{Oct 2016 -}
-		{Present}
-        		{Tutor}
-        		{\href{https://www.uni-freiburg.de/}{University of Freiburg, Germany}}
-        		{}
-        		{\begin{itemize}
-        			\item Assisting students understanding the contents of courses, organization of weekly meetings
-        			\item Courses:
-        			\begin{itemize}
-        				\item \textit{Programming in C++}
-        				\item \textit{Information Retrieval}
-        				\item \textit{Algorithms and data structures}
-        				\item \textit{System Design Project}
-        			\end{itemize}
-        		\end{itemize}}\\
-     	\twentyitem
-    		{Nov 2008 -}
-		{Present}
-        		{Administrator \& Content Creator}
-        		{\href{http://www.fwwiki.de/}{FreewarWiki, Online}}
-        		{}
-        		{\begin{itemize}
-        			\item Development of automated bots and scripts that execute recurring tasks, database management,
-        				creation of scripted templates to assist inexperienced users in content creation
-        			\item Extensive documentation of game elements and content
-        			\item Inspection, correction and improvement of contributions
-        		\end{itemize}}\\
-	\twentyitem
-    		{Nov 2014 -}
-		{Dec 2015}
-        		{Board \& Webadmin}
-        		{\href{https://www.gruppe-w.de/}{Gruppe W, Online}}
-        		{}
-        		{\begin{itemize}
-        			\item Web development, performance improvement, development of automated web-integrated
-        				management software to ease workflow of all members
-			\item Human resource management, project management, planning and giving conferences, mediator
-        			\item Development of modifications for ArmA 3, creation of 2D artwork and video editing
-        		\end{itemize}}\\
-	\twentyitem
-    		{Mar 2007 -}
-		{Jul~\, 2012}
-        		{Lead Programmer \& Artist}
-        		{\href{https://github.com/ZabuzaW/TalesOfFreewar}{Tales of Freewar Team, Germany}}
-        		{}
-        		{\begin{itemize}
-        			\item Programming a RPG using the game framework RM2k3, responsible for game logic,
-        				implementing story, levels, conversations and battle logic
-        			\item Creation of 2D Art and sound editing, design and draft of maps
-        		\end{itemize}}\\
-	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
-\end{twenty}
+\makesidebarSecond % Print the sidebar
 
 %----------------------------------------------------------------------------------------
 %	 Awards
@@ -167,8 +207,8 @@
         		{\href{https://sv-comp.sosy-lab.org/2017/}{ETAPS/SV-COMP}}
         		{}
         		{\begin{itemize}
-        			\item The competition compares state-of-the-art tools for software verification with respect to effectiveness
-        				and efficiency. The competition consists of two phases: a training phase and an evaluation phase.
+        			\item Yearly international competition on Software Verification, comparing state-of-the-art tools
+        				with respect to effectiveness and efficiency.
         		\end{itemize}}\\
         	\twentyitem
     		{Oct 2016}
@@ -177,23 +217,17 @@
         		{\href{http://rers-challenge.org/2016/}{RERS / ISoLA'16}}
         		{}
         		{\begin{itemize}
-        			\item The RERS Challenge provides a wealth of problems of increasing complexity, the more involved of
-        				which will probably be beyond any individual state-of-the-art method or tool. Characteristic for RERS
-        				is its wide scope, which addresses not only source code analyzers, but also (model-based) testers
-        				and (test-based) modelers, and in particular Free stylers.
+        			\item Challenges revolving around unsolved problems on the topic of Source Code Analysis,
+        				model-based testing and test-based modeling. Directly contributing to global research.
         		\end{itemize}}\\
 	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
 \end{twenty}
-
-\newpage
-
-\makeprofile % Print the sidebar
 
 %----------------------------------------------------------------------------------------
 %	 Publications
 %----------------------------------------------------------------------------------------
 
-\section{Publications \& Preprints}
+\section{Publications}
 \begin{twenty} % Environment for a list with descriptions
 	\twentyitem
     		{Sep 2018}
@@ -223,25 +257,59 @@
 %	 Projects
 %----------------------------------------------------------------------------------------
 
-\section{Projects}
+\section{Projects (12 of 58)}
 \begin{twenty} % Environment for a list with descriptions
 	\twentyitem
+    		{Jul 2020 -}
+		{Aug 2020}
+        		{FastCDC4J}
+        		{\href{https://github.com/Zabuzard/FastCDC4J}{github/FastCDC4J}}
+        		{Java 14, Maven, gnuplot}
+        		{\begin{itemize}
+        			\item Highly customizable implementation of a state-of-the-art solution for data deduplication and patching
+        		\end{itemize}}\\
+	\twentyitem
+    		{Nov 2019 -}
+		{Nov 2019}
+        		{Maglev}
+        		{\href{https://github.com/Zabuzard/Maglev}{github/Maglev}}
+        		{Java 9, Maven}
+        		{\begin{itemize}
+        			\item Sophisticated and customizable library for solving various shortest path problems using Module-Dijkstra, ALT and A*
+        		\end{itemize}}\\
+	\twentyitem
+    		{Nov 2019 -}
+		{Nov 2019}
+        		{Closy}
+        		{\href{https://github.com/Zabuzard/Closy}{github/Closy}}
+        		{Java 9, Maven, gnuplot}
+        		{\begin{itemize}
+        			\item Compact library for nearest neighbor computation based on Cover Trees
+        		\end{itemize}}\\
+	\twentyitem
     		{Apr 2018 -}
-		{Present}
+		{Aug 2018}
         		{Cobweb}
-        		{}
-        		{journey-planner, multi-modal-search, traffic-networks, shortest-paths}
+        		{\href{https://github.com/Zabuzard/Cobweb}{github/Cobweb}}
+        		{Java 9, Gson, JUnit, REST, JDBC, SQLite, Logback, SLF4J, Apache Commons, Ant, AJAX, jQuery, Leaflet}
         		{\begin{itemize}
         			\item Development of a backend for a multi-modal journey-planner
         			\item Research, implementation, optimization and benchmarking of shortest path algorithms
         			\item Processing OSM, GTFS and real-time data on huge traffic-networks
         		\end{itemize}}\\
+\end{twenty}
+
+\newpage
+
+\makesidebarThird % Print the sidebar
+
+\begin{twenty}
 	\twentyitem
     		{Dez 2015 -}
 		{Oct 2017}
-        		{ULTIMATE}
-        		{}
-        		{program-analysis, model-checking, reachability, termination}
+        		{Ultimate}
+        		{\href{https://github.com/ultimate-pa/ultimate}{github/Ultimate}}
+        		{Java 8, JUnit, gnuplot, Jenkins, SonarQube}
         		{\begin{itemize}
         			\item Development, implementation, analysis and benchmarking of algorithms to generate random finite word,
         			infinite word, nested word and tree automata (FA, NWA, TA) and also algorithms to minimize them
@@ -250,30 +318,65 @@
     		{Apr 2016 -}
 		{Oct 2017}
         		{Sparkle}
-        		{}
-        		{api, selenium, mmorpg}
+        		{\href{https://github.com/Zabuzard/Sparkle}{github/Sparkle}}
+        		{Java 8, Selenium}
         		{\begin{itemize}
         			\item Creation of a robust Selenium driven API for a browser embedded MMORPG which uses web-crawling mechanisms
+        		\end{itemize}}\\
+	\twentyitem
+    		{Mar 2017 -}
+		{Oct 2017}
+        		{BeedleBot}
+        		{\href{https://github.com/Zabuzard/BeedleBot}{github/BeedleBot}}
+        		{Java 8, Selenium, jQuery, Local Storage, HTML, CSS}
+        		{\begin{itemize}
+        			\item Creation of a robust Selenium driven semi-automatic bot that trades items in a browser embedded MMORPG with other players
+        		\end{itemize}}\\
+	\twentyitem
+    		{May 2017 -}
+		{Aug 2017}
+        		{TreeFlood}
+        		{\href{https://github.com/Zabuzard/TreeFlood}{github/TreeFlood}}
+        		{Java 8, Swing, gnuplot}
+        		{\begin{itemize}
+        			\item Implementation of an algorithm to distributedly explore trees and creation of a GUI to visualize the algorithm.
+        		\end{itemize}}\\
+	\twentyitem
+    		{Oct 2016 -}
+		{Jul 2017}
+        		{LexiSearch}
+        		{\href{https://github.com/Zabuzard/LexiSearchExercises}{github/LexiSearch}}
+        		{Java 8, JUnit, JavaScript, Python 3, Checkstyle, REST, gnuplot}
+        		{\begin{itemize}
+        			\item Information Retrieval library based on inverted indices, q-grams and BM-25 ranking
+        			\item Server offering a search engine as REST API with a light frontend consuming it
         		\end{itemize}}\\
 	\twentyitem
     		{Jun 2016 -}
 		{Apr 2017}
         		{Mem-Eater-Bug}
-        		{}
-        		{jna, memory-manipulation, code-injection, windows-api}
+        		{\href{https://github.com/Zabuzard/Mem-Eater-Bug}{github/Mem-Eater-Bug}}
+        		{Java 8, JNI, JNA, WinAPI, Attach API}
         		{\begin{itemize}
-        			\item Familiarization with security technologies and reverse engineering
         			\item Providing an API which is capable of hooking onto other processes in order to provide memory manipulation
         				methods and the possibility to inject foreign code
+        		\end{itemize}}\\
+	\twentyitem
+    		{Aug 2016 -}
+		{Aug 2016}
+        		{DiceCounter}
+        		{\href{https://github.com/Zabuzard/DiceCounter}{github/DiceCounter}}
+        		{Lua, Blender, Photoshop, Tabletop Simulator API, Steam Workshop}
+        		{\begin{itemize}
+        			\item Tabletop Simulator mod that counts and displays pip frequencies of dices inside a custom box
         		\end{itemize}}\\
 	\twentyitem
     		{Apr 2014 -}
 		{Feb 2015}
         		{Antigen}
-        		{}
-        		{game, real-time-strategy, game-design, scrum}
+        		{\href{https://github.com/Zabuzard/Antigen}{github/Antigen}}
+        		{C\#, XNA, MonoGame, Nuclex, C5, Scrum}
         		{\begin{itemize}
-        			\item In a team of 5 develop a strategy game from scratch using Scrum as software development managing framework
         			\item Draft and design of an idea for a real time strategy game, creation of a detailed game design document
         			\item Implementation of the game, primarily its logic and fast collision detection solutions
         		\end{itemize}}\\

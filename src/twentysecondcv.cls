@@ -161,6 +161,7 @@
 \newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
 \newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
 \newcommand{\cvname}[1]{\renewcommand{\cvname}{#1}}
+\newcommand{\cvavatar}[1]{\renewcommand{\cvavatar}{#1}}
 \newcommand{\cvjobtitle}[1]{\renewcommand{\cvjobtitle}{#1}}
 
 % Command for printing the contact information icons
@@ -170,7 +171,6 @@
 \newcommand\programming[1]{ 
 	\renewcommand{\programming}{
 		\begin{tikzpicture}
-        	\node [above right] at (0, 4) {$0 \: LOC \: \arrow{2.9} \: 3\,000\,000 \: LOC$};
 			\foreach [count=\i] \x/\y in {#1}{
 				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
 				\draw[fill=white,pblue](0,\i) rectangle (\y,\i+0.4);
@@ -180,18 +180,28 @@
 	}
 }
 
+% Command for printing technologies
+\newcommand\technologies[1]{ 
+	\renewcommand{\technologies}{
+			\foreach [count=\i] \z/\x/\y in {#1}{
+				\textbf{\colorbox{\z}{\x}}\vspace{2mm}\\
+				\y\vspace{2mm}\\
+			}
+	}
+}
+
 %----------------------------------------------------------------------------------------
-%  SIDEBAR LAYOUT
+%  SIDEBAR LAYOUT FIRST
 %----------------------------------------------------------------------------------------
 
-\newcommand{\makeprofile}{
+\newcommand{\makesidebarFirst}{
   \begin{tikzpicture}[remember picture,overlay]
       \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
   \end{tikzpicture}
 
   %------------------------------------------------
 
-  \begin{textblock}{6}(0.5, 0.2)
+  \begin{textblock}{5.9}(0.5, 0.2)
 
     %------------------------------------------------
     
@@ -203,10 +213,19 @@
     %------------------------------------------------
     
     {\Large\color{black!80}\cvjobtitle}
+	
+	%------------------------------------------------
+	
+	\vspace{5mm}
+	\begin{figure}[h!]
+		\centering
+		\setlength{\fboxsep}{0pt}
+		\setlength{\fboxrule}{1pt}
+		\fbox{\includegraphics[width=3.5cm, height=3.5cm]{\cvavatar}}
+	\end{figure}
 
     %------------------------------------------------
-    
-    \vspace{4mm}
+    \vspace{5mm}
     \renewcommand{\arraystretch}{2}
     \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
@@ -259,29 +278,79 @@
     \end{tabular}
 
     %------------------------------------------------
-    \vspace{4mm}
+    \vspace{6mm}
     \profilesection{Skills}{4cm}
+	
+	\vspace{2mm}
     
     {\large \textbf{Overview}}
+	
+	\vspace{2mm}
 
 	\skills
         
         %------------------------------------------------
         
-        \vspace{3mm}
+        \vspace{2mm}
        
 	 {\large \textbf{Programming}} 
+	 
+		\vspace{2mm}
 
 		 \programming
-         
-        \vspace{4mm}
-        \profilesection{Languages}{2.15cm} 
+		 
+		 \vspace{2mm}
+      
+  \end{textblock}
+}
+
+%----------------------------------------------------------------------------------------
+%  SIDEBAR LAYOUT SECOND
+%----------------------------------------------------------------------------------------
+
+\newcommand{\makesidebarSecond}{
+  \begin{tikzpicture}[remember picture,overlay]
+      \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+  \end{tikzpicture}
+
+  %------------------------------------------------
+
+  \begin{textblock}{5.9}(0.5, 0.2)
+
+    %------------------------------------------------
+    \vspace{4mm}
+        \profilesection{Technologies}{1.7cm}
+		
+		\vspace{1mm}
+        
+        \technologies
+      
+  \end{textblock}
+}
+
+%----------------------------------------------------------------------------------------
+%  SIDEBAR LAYOUT THIRD
+%----------------------------------------------------------------------------------------
+
+\newcommand{\makesidebarThird}{
+  \begin{tikzpicture}[remember picture,overlay]
+      \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+  \end{tikzpicture}
+
+  %------------------------------------------------
+
+  \begin{textblock}{5.9}(0.5, 0.2)
+
+    %------------------------------------------------
+    \vspace{4mm}
+		\profilesection{Languages}{2.3cm}
+		
+		\vspace{3mm}
         
         \languages
       
   \end{textblock}
 }
-
 
 %----------------------------------------------------------------------------------------
 %	 COLOURED SECTION TITLE BOX
@@ -337,7 +406,13 @@
 		{\color{pblue}\footnotesize#4}%
         }\\%
     #2&\parbox[t]{0.83\textwidth}{%
-		\ifblank{#5}{}{{\footnotesize#5} \\}
+		\ifblank{#5}{}{{
+			\footnotesize{
+				\foreach [count=\i] \x in {#5}{
+					{\colorbox{materialorange!20}{\strut\x}}
+				}
+			}
+		} \\}
 		#6%
 	}\\
 }
