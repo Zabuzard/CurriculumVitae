@@ -104,6 +104,7 @@
 \definecolor{stackoverflowGold}{HTML}{DDB000}
 \definecolor{stackoverflowSilver}{HTML}{8C9298}
 \definecolor{stackoverflowBronze}{HTML}{C38B5F}
+\definecolor{map}{HTML}{ea4335}
 
 \ifdefined\@cv@print
   \colorlet{green}{gray}
@@ -145,7 +146,6 @@
 \newcommand{\profilesection}[2]{\vspace{8pt}{\color{black!80} \huge #1 \rule[0.15\baselineskip]{#2}{1pt}}}
 
 % Define custom commands for CV info
-\newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
 \newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{#1}}
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
 \newcommand{\cvstackoverflow}[1]{\renewcommand{\cvstackoverflow}{#1}}
@@ -158,8 +158,6 @@
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
 \newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
-\newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
-\newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
 \newcommand{\cvname}[1]{\renewcommand{\cvname}{#1}}
 \newcommand{\cvavatar}[1]{\renewcommand{\cvavatar}{#1}}
 \newcommand{\cvjobtitle}[1]{\renewcommand{\cvjobtitle}{#1}}
@@ -228,6 +226,14 @@
     \vspace{5mm}
     \renewcommand{\arraystretch}{2}
     \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
+		\ifthenelse{\equal{\cvaddress}{}}{}{
+      		{$
+              \begin{array}{l}
+              \hspace{4mm} \huge \textnormal{\textcolor{map}{\faMapMarker}}
+              \end{array}
+              $}
+            & \cvaddress\\}
+			
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
       		{$
               \begin{array}{l}
@@ -250,7 +256,7 @@
               \end{array}
               $}
             & \href{mailto:\cvmail}{\cvmail} \\}
-      
+		\\
        \ifthenelse{\equal{\cvlinkedin}{}}{}{
             {$
               \begin{array}{l}
@@ -276,31 +282,6 @@
             }
             
     \end{tabular}
-
-    %------------------------------------------------
-    \vspace{6mm}
-    \profilesection{Skills}{4cm}
-	
-	\vspace{2mm}
-    
-    {\large \textbf{Overview}}
-	
-	\vspace{2mm}
-
-	\skills
-        
-        %------------------------------------------------
-        
-        \vspace{2mm}
-       
-	 {\large \textbf{Programming}} 
-	 
-		\vspace{2mm}
-
-		 \programming
-		 
-		 \vspace{2mm}
-      
   \end{textblock}
 }
 
@@ -317,14 +298,39 @@
 
   \begin{textblock}{5.9}(0.5, 0.2)
 
-    %------------------------------------------------
+  %------------------------------------------------
     \vspace{4mm}
-        \profilesection{Technologies}{1.7cm}
-		
-		\vspace{1mm}
+    \profilesection{Skills}{4cm}
+	
+	\vspace{4mm}
+    
+    {\large \textbf{Overview}}
+	
+	\vspace{4mm}
+
+	\skills
         
-        \technologies
+        %------------------------------------------------
+        
+        \vspace{6mm}
+       
+	 {\large \textbf{Programming}} 
+	 
+		\vspace{4mm}
+
+		 \programming
+		 
+		 \vspace{4mm}
       
+
+    %------------------------------------------------
+    \vspace{6mm}
+		\profilesection{Languages}{2.3cm}
+		
+		\vspace{4mm}
+        
+        \languages
+
   \end{textblock}
 }
 
@@ -340,14 +346,12 @@
   %------------------------------------------------
 
   \begin{textblock}{5.9}(0.5, 0.2)
-
-    %------------------------------------------------
-    \vspace{4mm}
-		\profilesection{Languages}{2.3cm}
+      \vspace{4mm}
+        \profilesection{Technologies}{1.7cm}
 		
-		\vspace{3mm}
+		\vspace{1mm}
         
-        \languages
+        \technologies
       
   \end{textblock}
 }
