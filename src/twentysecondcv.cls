@@ -148,6 +148,9 @@
 % Define custom commands for CV info
 \newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{#1}}
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
+\newcommand{\cvgithubRepos}[1]{\renewcommand{\cvgithubRepos}{#1}}
+\newcommand{\cvgithubForks}[1]{\renewcommand{\cvgithubForks}{#1}}
+\newcommand{\cvgithubStars}[1]{\renewcommand{\cvgithubStars}{#1}}
 \newcommand{\cvstackoverflow}[1]{\renewcommand{\cvstackoverflow}{#1}}
 \newcommand{\cvstackoverflowId}[1]{\renewcommand{\cvstackoverflowId}{#1}}
 \newcommand{\cvstackoverflowRep}[1]{\renewcommand{\cvstackoverflowRep}{#1}}
@@ -264,20 +267,20 @@
               \end{array}
               $} & \href{https://www.linkedin.com\cvlinkedin}{\cvlinkedin} \\
             }  
-        \ifthenelse{\equal{\cvgithub}{}}{}{
+        \ifthenelse{\equal{\cvgithub}{}}{}{\vspace{-4mm}
             {$
               \begin{array}{l}
               \hspace{3mm} \huge \textnormal{\faGithub}
               \end{array}
               $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
+              	&  \vspace{-9mm} \footnotesize \faBook \cvgithubRepos \, \faUsb \cvgithubForks \, \faStar \cvgithubStars\\
             }
-		\ifthenelse{\equal{\cvstackoverflow}{}}{}{
-            {$
-              \begin{array}{l}
-              \hspace{3mm} \huge \textnormal{\textcolor{stackoverflow}{\faStackOverflow}}
+		\ifthenelse{\equal{\cvstackoverflow}{}}{}{\vspace{-11mm}
+            {$\begin{array}{l}
+              \hspace{3mm}\huge \textnormal{\textcolor{stackoverflow}{\faStackOverflow}}
               \end{array}
-              $} & \href{https://stackoverflow.com/users/\cvstackoverflowId/\cvstackoverflow?tab=profile}{\cvstackoverflowId/\cvstackoverflow} \\
-				& \vspace{-7mm} \footnotesize\cvstackoverflowRep~Rep. \color{stackoverflowGold}{$\bullet$ \cvstackoverflowGold } \color{stackoverflowSilver}{$\bullet$ \cvstackoverflowSilver }
+              $} & \vspace{-8mm}\href{https://stackoverflow.com/users/\cvstackoverflowId/\cvstackoverflow?tab=profile}{\cvstackoverflowId/\cvstackoverflow} \\
+				& \vspace{-13mm} \footnotesize\cvstackoverflowRep~Rep. \color{stackoverflowGold}{$\bullet$ \cvstackoverflowGold } \color{stackoverflowSilver}{$\bullet$ \cvstackoverflowSilver }
 					\color{stackoverflowBronze}{$\bullet$ \cvstackoverflowBronze}
             }
             
