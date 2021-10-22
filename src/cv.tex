@@ -22,24 +22,24 @@
 % If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
 
 \cvname{DANIEL TISCHNER} % Your name
-\cvjobtitle{Software Engineer, 29} % Job
-\cvavatar{avatar.jpg} % Avatar
+\cvjobtitle{Software Engineer, 30} % Job
+\cvavatar{avatar_2021.jpg} % Avatar
 % title/career
 
 \cvaddress{Düsseldorf, Germany} % Address
 \cvlinkedin{/in/daniel-tischner} % LinkedIn site
 \cvgithub{Zabuzard} % Github site
-\cvgithubRepos{58} % GitHub amount of repositories
-\cvgithubForks{24} % GitHub amount of forks
-\cvgithubStars{134} % GitHub amount of stars
+\cvgithubRepos{59} % GitHub amount of repositories
+\cvgithubForks{29} % GitHub amount of forks
+\cvgithubStars{137} % GitHub amount of stars
 \cvsite{} % Personal website
 \cvnumberphone{} % Phone number
 \cvstackoverflow{Zabuzard} % StackOverflow user name
 \cvstackoverflowId{2411243} % StackOverflow user id
-\cvstackoverflowRep{20,802} % StackOverflow user reputation
+\cvstackoverflowRep{22,296} % StackOverflow user reputation
 \cvstackoverflowGold{7} % StackOverflow amount of gold badges
-\cvstackoverflowSilver{45} % StackOverflow amount of silver badges
-\cvstackoverflowBronze{67} % StackOverflow amount of bronze badges
+\cvstackoverflowSilver{49} % StackOverflow amount of silver badges
+\cvstackoverflowBronze{73} % StackOverflow amount of bronze badges
 \cvmail{daniel.tischner.cs@gmail.com} % Email address
 
 % Skill overview bubbles
@@ -76,22 +76,21 @@
 
 % Technologies
 \technologies{
-	{materialteal!35/Java/Gson, Jackson, Selenium, JSoup, Apache HttpComponents, Swing\vspace{1mm}\\
-		JUnit, Logback, SLF4J, Log4j, Checkstyle,\vspace{1mm}\\
+	{materialteal!35/Java/Gson, Jackson, Selenium, JSoup, HttpComponents, Swing, JBoss Drools,\vspace{1mm}\\
+		JUnit, Mockito, Logback, SLF4J, Log4j,\vspace{1mm}\\
 		JNI, JNA, JMH, JProfiler,\vspace{1mm}\\
-		JDBC, Hibernate, OneBusAway, Osm4j, Tomcat,\vspace{1mm}\\
-		Apache Commons, Guava, protobuf, fastutil, Trove, Google Collections, Eclipse Collections,\vspace{1mm}\\
-		JWBF, detectlanguage, JavaILP},
+		JDBC, Hibernate, OneBusAway, Osm4j, Tomcat, Camel, Kafka, JDA,\vspace{1mm}\\
+		Apache Commons, Guava, protobuf, fastutil, Trove, Google Collections, Eclipse Collections},
 	{materialteal!35/Spring/Boot, Framework, Data, Security, Session, Batch, Web Flow, Web Services, Reactor, WebFlux, Cloud, Actuator, Hystrix},
 	{materialteal!35/Frontend/AngularJS, Knockout, jQuery, Thymeleaf, Leaflet, PHP-Fusion},
 	{materialteal!35/C++ $\textbullet$ C\#/Boost, WinAPI, VSProfiler, Qt, XNA, MonoGame},
-	{materialteal!35/Databases/MySQL, SQLite, InfluxDB, NoSQL, H2, MariaDB},
+	{materialteal!35/Databases/MySQL, SQLite, InfluxDB, NoSQL, H2, MariaDB, PostgreSQL, Oracle DB, Flyway, jOOQ},
 	{materialteal!35/Networking/TCP, UDP, HTTP, HTTPS, FTP,\vspace{1mm}\\
 		AWS, REST, JSON, protobuf},
 	{materialamber!20/IDEs/Intellij, Eclipse, Visual Studio, VSC},
 	{materialamber!20/Versioning/Git, SVN, Perforce, GitHub, GitLab, GitKraken, SourceTree, P4Merge, WinMerge},
-	{materialamber!20/Build Management/Maven, CMake, Conan, Ant, Jenkins, SonarQube, Resharper, Checkstyle},
-	{materialamber!20/Organization/GitLab Issues, Jira, Confluence, Toggl, Grafana, Kibana, SmartRecruiters, KeePass},
+	{materialamber!20/Build Management/Maven, Gradle, CMake, Conan, Ant, Jenkins, docker, jib, SonarQube, Resharper, Checkstyle, Spotless},
+	{materialamber!20/Organization/GitLab Issues, Jira, Confluence, Redmine, Mantis, Toggl, Grafana, Kibana, SmartRecruiters, KeePass, ISO 9001},
 	{materialamber!20/Communication/Slack, Discord, Skype, MS Teams, MS Outlook},
 	{materialamber!20/Image $\textbullet$ Video/Photoshop, PhotoFiltre, Gimp, OBS Studio, Sony Vegas, Dxtory, Audacity}}
 
@@ -124,8 +123,20 @@
 
 \begin{twenty} % Environment for a list with descriptions
      	\twentyitem
-    		{Nov 2018 -}
+    		{Sep 2021 -}
 		{Present}
+        		{Java Programmer (Senior)}
+        		{\href{https://www.q2web.de/}{Q2WEB, Germany}}
+        		{Java 11, JBoss Drools, Apache Camel, Apache Kafka, SQL, PostgreSQL, Oracle DB, REST, SOA, Maven, Jenkins, Redmine, Mantis, ISO 9001}
+        		{\begin{itemize}
+        			\item Development of custom software and services, as well as consulting for international clients in the telecommunication sector
+        			\item Drool-rules based assistant software for planning network changes, such as which antennas have to
+        			be changed for rolling out 5G
+        			\item Maintenance and enhancement of old services revolving around serving and synchronizing data from several client databases
+        		\end{itemize}}\\
+     	\twentyitem
+    		{Nov 2018 -}
+		{Aug 2021}
         		{C++ Programmer (Intermediate)}
         		{\href{https://duesseldorf.ubisoft.com/en}{Ubisoft Düsseldorf, Germany}}
         		{C++20, C++17, C++14, C++11, SQL, Boost, WinAPI, REST, AWS, protobuf, Selenium, CMake, Jenkins, Jira, Scrum}
@@ -173,7 +184,9 @@
 	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
 \end{twenty}
 
-\vspace{6mm}
+\newpage
+
+\makesidebarSecond % Print the sidebar
 
 %----------------------------------------------------------------------------------------
 %	 EDUCATION
@@ -197,10 +210,6 @@
         {}
 	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
 \end{twenty}
-
-\newpage
-
-\makesidebarSecond % Print the sidebar
 
 %----------------------------------------------------------------------------------------
 %	 Awards
@@ -269,8 +278,20 @@
 %	 Projects
 %----------------------------------------------------------------------------------------
 
-\section{Projects (12 of 58)}
+\section{Projects (11 of 59)}
 \begin{twenty} % Environment for a list with descriptions
+	\twentyitem
+    		{Sep 2021 -}
+		{Present}
+        		{TJ-Bot}
+        		{\href{https://github.com/Together-Java/TJ-Bot}{github/TJ-Bot}}
+        		{Java 17, JDA, Discord, Gradle, JUnit, Mockito, SonarQube, Spotless, SQLite, Flyway, jOOQ, Log4j 2, SLF4J, jib, docker, Hetzner, Kanban}
+        		{\begin{itemize}
+        			\item Leading and administrating the development of a community Discord-Bot
+        			\item Creation and development of the underlying system and main architecture,
+        			as well as being the main contributor for command and logic programming
+        			\item Setup and maintenance of the CI/CD pipelines
+        		\end{itemize}}\\
 	\twentyitem
     		{Jul 2020 -}
 		{Aug 2020}
@@ -288,26 +309,6 @@
         		{Java 9, Maven}
         		{\begin{itemize}
         			\item Sophisticated and customizable library for solving various shortest path problems using \textit{Module-Dijkstra}, \textit{ALT} and \textit{A*}
-        		\end{itemize}}\\
-	\twentyitem
-    		{Nov 2019 -}
-		{Nov 2019}
-        		{Closy}
-        		{\href{https://github.com/Zabuzard/Closy}{github/Closy}}
-        		{Java 9, Maven, gnuplot}
-        		{\begin{itemize}
-        			\item Compact library for nearest neighbor computation based on \textit{Cover Trees}
-        		\end{itemize}}\\
-	\twentyitem
-    		{Apr 2018 -}
-		{Aug 2018}
-        		{Cobweb}
-        		{\href{https://github.com/Zabuzard/Cobweb}{github/Cobweb}}
-        		{Java 9, Gson, JUnit, REST, JDBC, SQLite, Logback, SLF4J, Apache Commons, Ant, AJAX, jQuery, Leaflet}
-        		{\begin{itemize}
-        			\item Development of a backend for a multi-modal journey-planner
-        			\item Research, implementation, optimization and benchmarking of shortest path algorithms
-        			\item Processing OSM, GTFS and real-time data on huge traffic-networks
         		\end{itemize}}
 \end{twenty}
 
@@ -318,6 +319,17 @@
 \vspace{10mm}
 
 \begin{twenty}
+	\twentyitem
+    		{Apr 2018 -}
+		{Aug 2018}
+        		{Cobweb}
+        		{\href{https://github.com/Zabuzard/Cobweb}{github/Cobweb}}
+        		{Java 9, Gson, JUnit, REST, JDBC, SQLite, Logback, SLF4J, Apache Commons, Ant, AJAX, jQuery, Leaflet}
+        		{\begin{itemize}
+        			\item Development of a backend for a multi-modal journey-planner
+        			\item Research, implementation, optimization and benchmarking of shortest path algorithms
+        			\item Processing OSM, GTFS and real-time data on huge traffic-networks
+        		\end{itemize}}\\
 	\twentyitem
     		{Dez 2015 -}
 		{Oct 2017}
@@ -346,16 +358,7 @@
         		{\begin{itemize}
         			\item Implementation of semi-automatic Selenium bot that trades items in a browser embedded MMORPG
 	        			with other players and a frontend injected into the game to monitor the bots state and health
-        		\end{itemize}}\\
-	\twentyitem
-    		{May 2017 -}
-		{Aug 2017}
-        		{TreeFlood}
-        		{\href{https://github.com/Zabuzard/TreeFlood}{github/TreeFlood}}
-        		{Java 8, Swing, gnuplot}
-        		{\begin{itemize}
-        			\item Implementation of an algorithm to distributedly explore trees and creation of a GUI to visualize the algorithm.
-        		\end{itemize}}\\
+        		\end{itemize}}
 	\twentyitem
     		{Oct 2016 -}
 		{Jul 2017}
